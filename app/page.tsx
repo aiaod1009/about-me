@@ -10,59 +10,67 @@ import RecommendCard from "@/components/widgets/RecommendCard";
 
 export default function Home() {
   return (
-    <div className="page-bg min-h-screen p-6 md:p-10">
-      {/* 4列网格布局 */}
-      <div className="max-w-[1100px] mx-auto grid grid-cols-4 gap-4 auto-rows-[minmax(80px,auto)]">
-        {/* 左侧边栏 - 跨4行 */}
-        <div className="col-span-1 row-span-4">
-          <Sidebar />
-        </div>
+    <div className="page-bg min-h-screen p-8">
+      <div className="max-w-[1200px] mx-auto">
+        {/* 主布局：左侧边栏 + 右侧内容区 */}
+        <div className="flex gap-6">
 
-        {/* 顶部插画 */}
-        <div className="col-span-1 row-span-1">
-          <IllustrationCard />
-        </div>
+          {/* 左侧边栏 - 固定宽度 */}
+          <div className="w-[220px] shrink-0">
+            <Sidebar />
+          </div>
 
-        {/* 写文章按钮 */}
-        <div className="col-span-2 flex items-start justify-end pt-2">
-          <button className="bg-teal-500 hover:bg-teal-600 text-white text-[13px] px-4 py-2 rounded-xl flex items-center gap-1.5 transition-colors shadow-sm cursor-pointer">
-            <span>✏️</span> 写文章
-          </button>
-        </div>
+          {/* 右侧内容区 - 自适应 */}
+          <div className="flex-1 min-w-0">
 
-        {/* 问候卡片 - 跨2列2行 */}
-        <div className="col-span-2 row-span-2">
-          <GreetingCard />
-        </div>
+            {/* 第一行：插画 + 写文章按钮 */}
+            <div className="flex items-start gap-4 mb-4">
+              <div className="w-[200px] h-[140px]">
+                <IllustrationCard />
+              </div>
+              <div className="flex-1 flex justify-end pt-4">
+                <button className="bg-teal-500 hover:bg-teal-600 text-white text-[13px] px-4 py-2 rounded-xl flex items-center gap-1.5 transition-colors shadow-sm cursor-pointer">
+                  <span>✏️</span> 写文章
+                </button>
+              </div>
+            </div>
 
-        {/* 时钟 */}
-        <div className="col-span-1 row-span-1">
-          <ClockWidget />
-        </div>
+            {/* 第二行：问候卡片 + 时钟 */}
+            <div className="flex gap-4 mb-4">
+              <div className="flex-1 h-[220px]">
+                <GreetingCard />
+              </div>
+              <div className="w-[180px] h-[100px]">
+                <ClockWidget />
+              </div>
+            </div>
 
-        {/* 日历 - 跨2行 */}
-        <div className="col-span-1 row-span-2">
-          <CalendarWidget />
-        </div>
+            {/* 第三行：公告 + 社交链接 + 日历（日历跨多行） */}
+            <div className="flex gap-4 mb-4">
+              <div className="flex-1">
+                {/* 公告 */}
+                <div className="mb-4">
+                  <NoticeCard />
+                </div>
+                {/* 社交链接 */}
+                <SocialLinks />
+              </div>
+              <div className="w-[220px]">
+                <CalendarWidget />
+              </div>
+            </div>
 
-        {/* 最新公告 */}
-        <div className="col-span-1 row-span-1">
-          <NoticeCard />
-        </div>
+            {/* 第四行：随机推荐 + 音乐播放器 */}
+            <div className="flex gap-4">
+              <div className="w-[180px]">
+                <RecommendCard />
+              </div>
+              <div className="flex-1">
+                <MusicPlayer />
+              </div>
+            </div>
 
-        {/* 社交链接 */}
-        <div className="col-span-1 row-span-1 flex items-center">
-          <SocialLinks />
-        </div>
-
-        {/* 随机推荐 */}
-        <div className="col-span-1 row-span-1">
-          <RecommendCard />
-        </div>
-
-        {/* 音乐播放器 */}
-        <div className="col-span-1 row-span-1">
-          <MusicPlayer />
+          </div>
         </div>
       </div>
     </div>
