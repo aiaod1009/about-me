@@ -12,7 +12,7 @@ export default function MusicPlayer() {
       {/* 播放器 */}
       <div className="widget-card p-4 flex items-center gap-3">
         <div className="w-8 h-8 rounded-full bg-teal-50 flex items-center justify-center text-base">
-
+          
         </div>
         <div className="flex-1 min-w-0">
           <p className="text-[13px] text-gray-600 font-medium truncate">
@@ -34,10 +34,11 @@ export default function MusicPlayer() {
             setLiked(!liked);
             setLikeCount(liked ? likeCount - 1 : likeCount + 1);
           }}
-          className={`text-[11px] px-2.5 py-1 rounded-full transition-colors cursor-pointer ${liked
+          className={`text-[11px] px-2.5 py-1 rounded-full transition-colors cursor-pointer ${
+            liked
               ? "bg-pink-100 text-pink-500"
               : "bg-pink-50 text-pink-300 hover:text-pink-400"
-            }`}
+          }`}
         >
           {liked ? "❤️" : "🤍"} {likeCount}
         </button>
