@@ -54,7 +54,7 @@ export default function Home() {
 
         {/* ================= 右列 ================= */}
         <div className="absolute" style={{ left: "760px", top: "100px", width: "120px" }}>
-          <button className="bg-[#1cb39b] hover:bg-teal-600 text-white text-[13px] px-4 py-1.5 rounded-2xl flex items-center gap-1.5 transition-colors shadow-sm cursor-pointer">
+          <button className="bg-[#3b82f6] hover:bg-blue-600 text-white text-[13px] px-4 py-1.5 rounded-2xl flex items-center gap-1.5 transition-colors shadow-sm cursor-pointer">
             <span>✏️</span> 写文章
           </button>
         </div>

@@ -59,7 +59,7 @@ export default function CalendarWidget() {
             {day === null ? (
               <span />
             ) : isCurrentMonth && day === today ? (
-              <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-teal-500 text-white text-[11px] font-medium">
+              <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-blue-500 text-white text-[11px] font-medium">
                 {day}
               </span>
             ) : (
