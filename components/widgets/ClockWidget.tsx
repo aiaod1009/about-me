@@ -14,7 +14,7 @@ export default function ClockWidget() {
   const minutes = time.getMinutes().toString().padStart(2, "0");
 
   return (
-    <div className="bg-gray-100/80 backdrop-blur-sm rounded-[20px] p-5 flex items-center justify-center border border-gray-200/40">
+    <div className="widget-card p-5 flex items-center justify-center">
       <div className="clock-digit text-[52px] text-gray-700 tracking-wider">
         {hours}
         <span className="text-blue-400 mx-1">:</span>
