@@ -71,7 +71,7 @@ export default function Sidebar() {
           </svg>
         </div>
         <div className="flex items-center gap-1.5">
-          <span className="font-semibold text-gray-800 text-[15px]">Ivy-neko</span>
+          <span className="font-semibold text-gray-800 text-[15px]">Aiaod</span>
           <span className="text-xs text-blue-500">[开发中]</span>
         </div>
       </div>
@@ -88,8 +88,8 @@ export default function Sidebar() {
             key={item.label}
             onClick={() => setActiveIndex(index)}
             className={`flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-[14px] text-left transition-all duration-200 cursor-pointer ${activeIndex === index
-                ? "bg-blue-50/80 text-blue-700 font-medium"
-                : "text-gray-500 hover:bg-gray-50/60"
+              ? "bg-blue-50/80 text-blue-700 font-medium"
+              : "text-gray-500 hover:bg-gray-50/60"
               }`}
           >
             <span className="text-gray-400 opacity-80">{item.icon}</span>
