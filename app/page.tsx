@@ -10,68 +10,61 @@ import RecommendCard from "@/components/widgets/RecommendCard";
 
 export default function Home() {
   return (
-    <div className="page-bg min-h-screen p-8">
-      <div className="max-w-[1200px] mx-auto">
-        {/* 主布局：左侧边栏 + 右侧内容区 */}
-        <div className="flex gap-6">
+    <div className="page-bg relative min-h-screen overflow-hidden flex items-center justify-center">
+      <div className="relative" style={{ width: "1100px", height: "700px" }}>
 
-          {/* 左侧边栏 - 固定宽度 */}
-          <div className="w-[220px] shrink-0">
-            <Sidebar />
-          </div>
-
-          {/* 右侧内容区 - 自适应 */}
-          <div className="flex-1 min-w-0">
-
-            {/* 第一行：插画 + 写文章按钮 */}
-            <div className="flex items-start gap-4 mb-4">
-              <div className="w-[200px] h-[140px]">
-                <IllustrationCard />
-              </div>
-              <div className="flex-1 flex justify-end pt-4">
-                <button className="bg-teal-500 hover:bg-teal-600 text-white text-[13px] px-4 py-2 rounded-xl flex items-center gap-1.5 transition-colors shadow-sm cursor-pointer">
-                  <span>✏️</span> 写文章
-                </button>
-              </div>
-            </div>
-
-            {/* 第二行：问候卡片 + 时钟 */}
-            <div className="flex gap-4 mb-4">
-              <div className="flex-1 h-[220px]">
-                <GreetingCard />
-              </div>
-              <div className="w-[180px] h-[100px]">
-                <ClockWidget />
-              </div>
-            </div>
-
-            {/* 第三行：公告 + 社交链接 + 日历（日历跨多行） */}
-            <div className="flex gap-4 mb-4">
-              <div className="flex-1">
-                {/* 公告 */}
-                <div className="mb-4">
-                  <NoticeCard />
-                </div>
-                {/* 社交链接 */}
-                <SocialLinks />
-              </div>
-              <div className="w-[220px]">
-                <CalendarWidget />
-              </div>
-            </div>
-
-            {/* 第四行：随机推荐 + 音乐播放器 */}
-            <div className="flex gap-4">
-              <div className="w-[180px]">
-                <RecommendCard />
-              </div>
-              <div className="flex-1">
-                <MusicPlayer />
-              </div>
-            </div>
-
-          </div>
+        {/* 左侧边栏 */}
+        <div className="absolute" style={{ left: "3%", top: "10%", width: "17%", height: "60%" }}>
+          <Sidebar />
         </div>
+
+        {/* 插画卡片 - 顶部中间 */}
+        <div className="absolute" style={{ left: "23%", top: "2%", width: "20%", height: "18%" }}>
+          <IllustrationCard />
+        </div>
+
+        {/* 写文章按钮 */}
+        <div className="absolute" style={{ left: "46%", top: "7%" }}>
+          <button className="bg-teal-500 hover:bg-teal-600 text-white text-[13px] px-4 py-2 rounded-xl flex items-center gap-1.5 transition-colors shadow-sm cursor-pointer">
+            <span>✏️</span> 写文章
+          </button>
+        </div>
+
+        {/* 问候卡片 - 中心 */}
+        <div className="absolute" style={{ left: "23%", top: "22%", width: "24%", height: "32%" }}>
+          <GreetingCard />
+        </div>
+
+        {/* 时钟 - 紧挨问候卡片右上方 */}
+        <div className="absolute" style={{ left: "49%", top: "10%", width: "15%", height: "14%" }}>
+          <ClockWidget />
+        </div>
+
+        {/* 日历 - 紧挨时钟下方 */}
+        <div className="absolute" style={{ left: "49%", top: "26%", width: "17%", height: "38%" }}>
+          <CalendarWidget />
+        </div>
+
+        {/* 最新公告 - 左下 */}
+        <div className="absolute" style={{ left: "8%", top: "72%", width: "15%", height: "17%" }}>
+          <NoticeCard />
+        </div>
+
+        {/* 社交链接 - 中下 */}
+        <div className="absolute" style={{ left: "26%", top: "58%" }}>
+          <SocialLinks />
+        </div>
+
+        {/* 随机推荐 - 中下偏左 */}
+        <div className="absolute" style={{ left: "28%", top: "68%", width: "15%", height: "19%" }}>
+          <RecommendCard />
+        </div>
+
+        {/* 音乐播放器 - 中下偏右 */}
+        <div className="absolute" style={{ left: "46%", top: "70%", width: "18%", height: "15%" }}>
+          <MusicPlayer />
+        </div>
+
       </div>
     </div>
   );
