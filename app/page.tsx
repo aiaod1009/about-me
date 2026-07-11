@@ -10,9 +10,9 @@ import RecommendCard from "@/components/widgets/RecommendCard";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen overflow-hidden flex items-center justify-center bg-gradient-to-br from-[#c8dcfa] to-[#fad4e4]">
+    <div className="relative min-h-screen overflow-auto flex items-start justify-center pt-1 bg-gradient-to-br from-[#c8dcfa] to-[#fad4e4]">
       {/* 限制最大容器并提供相对定位环境 */}
-      <div className="relative select-none" style={{ width: "1200px", height: "720px" }}>
+      <div className="relative select-none" style={{ width: "1200px", minHeight: "720px" }}>
 
         {/* ================= 左列 ================= */}
         <div className="absolute" style={{ left: "180px", top: "140px", width: "220px", height: "390px" }}>
