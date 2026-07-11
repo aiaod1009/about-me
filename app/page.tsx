@@ -1,7 +1,7 @@
 import Sidebar from "@/components/widgets/Sidebar";
 import GreetingCard from "@/components/widgets/GreetingCard";
 import ClockWidget from "@/components/widgets/ClockWidget";
-import CalendarWidget from "@/components/widgets/CalendarWidget";
+import ProjectList from "@/components/widgets/ProjectList";
 import NoticeCard from "@/components/widgets/NoticeCard";
 import SocialLinks from "@/components/widgets/SocialLinks";
 import MusicPlayer from "@/components/widgets/MusicPlayer";
@@ -63,9 +63,9 @@ export default function Home() {
           <ClockWidget />
         </div>
 
-        {/* 日历大幅度下移，拉开与时钟的间距 */}
+        {/* 项目列表 */}
         <div className="absolute" style={{ left: "760px", top: "290px", width: "260px", height: "260px" }}>
-          <CalendarWidget />
+          <ProjectList />
         </div>
 
       </div>
