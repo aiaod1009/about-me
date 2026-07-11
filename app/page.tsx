@@ -10,7 +10,7 @@ import RecommendCard from "@/components/widgets/RecommendCard";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen overflow-hidden flex items-center justify-center bg-gradient-to-br from-[#c8dcfa] to-[#fad4e4]">
+    <div className="relative min-h-screen overflow-hidden flex items-center justify-center bg-gradient-to-br from-[#a8d0ff] to-[#ffd5dc]">
       {/* 限制最大容器并提供相对定位环境 */}
       <div className="relative select-none" style={{ width: "1200px", height: "720px" }}>
 
@@ -54,7 +54,7 @@ export default function Home() {
 
         {/* ================= 右列 ================= */}
         <div className="absolute" style={{ left: "760px", top: "100px", width: "120px" }}>
-          <button className="bg-[#3b82f6] hover:bg-blue-600 text-white text-[13px] px-4 py-1.5 rounded-2xl flex items-center gap-1.5 transition-colors shadow-sm cursor-pointer">
+          <button className="bg-[#6b9ae7] hover:bg-blue-600 text-white text-[13px] px-4 py-1.5 rounded-2xl flex items-center gap-1.5 transition-colors shadow-sm cursor-pointer">
             <span>✏️</span> 写文章
           </button>
         </div>
