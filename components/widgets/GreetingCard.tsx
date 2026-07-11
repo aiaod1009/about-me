@@ -23,8 +23,8 @@ export default function GreetingCard() {
   return (
     <div className="widget-card p-6 flex flex-col items-center justify-center text-center h-full">
       {/* 头像 */}
-      <div className="w-[72px] h-[72px] rounded-full bg-gradient-to-br from-yellow-100 via-amber-50 to-yellow-100 flex items-center justify-center text-4xl mb-4 shadow-sm">
-        🐱
+      <div className="w-[72px] h-[72px] rounded-full overflow-hidden mb-4 shadow-sm ring-2 ring-yellow-100/60">
+        <img src="/aiaod.jpg" alt="avatar" className="w-full h-full object-cover" />
       </div>
       <p className="text-gray-400 text-[15px] mb-2 font-light">{greeting}</p>
       <p className="text-gray-700 text-[17px] leading-relaxed font-light">
