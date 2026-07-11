@@ -11,58 +11,72 @@ import RecommendCard from "@/components/widgets/RecommendCard";
 export default function Home() {
   return (
     <div className="page-bg relative min-h-screen overflow-hidden flex items-center justify-center">
-      <div className="relative" style={{ width: "1100px", height: "700px" }}>
+      {/* 限制最大容器并提供相对定位环境 */}
+      <div className="relative select-none" style={{ width: "1200px", height: "720px" }}>
 
-        {/* 左侧边栏 */}
-        <div className="absolute" style={{ left: "3%", top: "10%", width: "17%", height: "60%" }}>
+        {/* ================= 左列 (Left Column) ================= */}
+
+        {/* 左侧边栏：顶部与时钟对齐 */}
+        <div className="absolute" style={{ left: "180px", top: "140px", width: "220px", height: "390px" }}>
           <Sidebar />
         </div>
 
-        {/* 插画卡片 - 顶部中间 */}
-        <div className="absolute" style={{ left: "23%", top: "2%", width: "20%", height: "18%" }}>
+        {/* 最新公告：底部与整个界面底线对齐 */}
+        <div className="absolute" style={{ left: "180px", top: "560px", width: "220px", height: "120px" }}>
+          <NoticeCard />
+        </div>
+
+
+        {/* ================= 中列 (Center Column) ================= */}
+
+        {/* 猫咪插画 */}
+        <div className="absolute" style={{ left: "440px", top: "60px", width: "280px", height: "160px" }}>
           <IllustrationCard />
         </div>
 
-        {/* 写文章按钮 */}
-        <div className="absolute" style={{ left: "46%", top: "7%" }}>
-          <button className="bg-teal-500 hover:bg-teal-600 text-white text-[13px] px-4 py-2 rounded-xl flex items-center gap-1.5 transition-colors shadow-sm cursor-pointer">
+        {/* 问候卡片 */}
+        <div className="absolute" style={{ left: "440px", top: "240px", width: "280px", height: "260px" }}>
+          <GreetingCard />
+        </div>
+
+        {/* 社交链接：紧贴问候卡片下方 */}
+        <div className="absolute flex justify-center" style={{ left: "440px", top: "510px", width: "280px", height: "40px" }}>
+          <SocialLinks />
+        </div>
+
+        {/* 随机推荐：位于中列偏左下 */}
+        <div className="absolute" style={{ left: "440px", top: "570px", width: "140px", height: "110px" }}>
+          <RecommendCard />
+        </div>
+
+
+        {/* ================= 右列 (Right Column) ================= */}
+
+        {/* 顶部操作区 (写文章按钮) */}
+        <div className="absolute" style={{ left: "760px", top: "90px", width: "260px" }}>
+          <button className="bg-[#1cb39b] hover:bg-teal-600 text-white text-[13px] px-4 py-1.5 rounded-xl flex items-center gap-1.5 transition-colors shadow-sm cursor-pointer">
             <span>✏️</span> 写文章
           </button>
         </div>
 
-        {/* 问候卡片 - 中心 */}
-        <div className="absolute" style={{ left: "23%", top: "22%", width: "24%", height: "32%" }}>
-          <GreetingCard />
-        </div>
-
-        {/* 时钟 - 紧挨问候卡片右上方 */}
-        <div className="absolute" style={{ left: "49%", top: "10%", width: "15%", height: "14%" }}>
+        {/* 电子时钟 */}
+        <div className="absolute" style={{ left: "760px", top: "140px", width: "180px", height: "100px" }}>
           <ClockWidget />
         </div>
 
-        {/* 日历 - 紧挨时钟下方 */}
-        <div className="absolute" style={{ left: "49%", top: "26%", width: "17%", height: "38%" }}>
+        {/* 日历组件：中心与问候卡片近似 */}
+        <div className="absolute" style={{ left: "760px", top: "260px", width: "260px", height: "260px" }}>
           <CalendarWidget />
         </div>
 
-        {/* 最新公告 - 左下 */}
-        <div className="absolute" style={{ left: "8%", top: "72%", width: "15%", height: "17%" }}>
-          <NoticeCard />
-        </div>
-
-        {/* 社交链接 - 中下 */}
-        <div className="absolute" style={{ left: "26%", top: "58%" }}>
-          <SocialLinks />
-        </div>
-
-        {/* 随机推荐 - 中下偏左 */}
-        <div className="absolute" style={{ left: "28%", top: "68%", width: "15%", height: "19%" }}>
-          <RecommendCard />
-        </div>
-
-        {/* 音乐播放器 - 中下偏右 */}
-        <div className="absolute" style={{ left: "46%", top: "70%", width: "18%", height: "15%" }}>
+        {/* 音乐播放器：与底部的推荐卡片齐平 */}
+        <div className="absolute flex flex-col gap-2" style={{ left: "760px", top: "570px", width: "240px" }}>
           <MusicPlayer />
+          <div className="pl-2">
+            <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-rose-50/80 backdrop-blur-sm rounded-full text-[10px] text-rose-400 shadow-sm">
+              ❤️ <span className="text-gray-400 font-mono">11424</span>
+            </span>
+          </div>
         </div>
 
       </div>
