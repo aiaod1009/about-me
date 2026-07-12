@@ -169,14 +169,13 @@ export default function IllustrationCard() {
       <img
         src="/image.png"
         alt="Samoyed"
-        className={`pet-samoyed absolute transition-transform duration-150 ${
-          isHappy ? "pet-happy scale-105" : ""
-        } ${isNapping ? "pet-napping" : ""}`}
+        className={`pet-samoyed absolute transition-transform duration-150 ${isHappy ? "pet-happy scale-105" : ""
+          } ${isNapping ? "pet-napping" : ""}`}
         style={{
           width: "230px",
           imageRendering: "pixelated",
-          right: "-4px",
-          bottom: -2,
+          right: "-50px",
+          bottom: 4,
           mixBlendMode: "multiply",
         }}
       />
