@@ -122,26 +122,6 @@ export default function IllustrationCard() {
         <div className="rounded-full bg-white/55 px-2.5 py-1 text-[11px] font-medium text-amber-700 shadow-sm backdrop-blur-md">
           {mood}
         </div>
-        <div className="flex gap-1.5">
-          <button
-            type="button"
-            onClick={handleSnack}
-            className="pet-action-button"
-            aria-label="喂一口"
-            title="喂一口"
-          >
-            <span aria-hidden>🍪</span>
-          </button>
-          <button
-            type="button"
-            onClick={handleNap}
-            className="pet-action-button"
-            aria-label={isNapping ? "叫醒" : "睡觉"}
-            title={isNapping ? "叫醒" : "睡觉"}
-          >
-            <span aria-hidden>{isNapping ? "☀️" : "🌙"}</span>
-          </button>
-        </div>
       </div>
 
       <div className="absolute left-5 top-12 z-20 flex flex-col gap-1.5">
