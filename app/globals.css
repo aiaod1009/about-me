@@ -67,3 +67,129 @@ body {
   background: #d1d5db;
   border-radius: 2px;
 }
+
+/* 小狗尾巴摇动动画 */
+@keyframes wag {
+
+  0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: -60px -20px;
+  }
+
+  25% {
+    transform: rotate(15deg);
+    transform-origin: -60px -20px;
+  }
+
+  75% {
+    transform: rotate(-15deg);
+    transform-origin: -60px -20px;
+  }
+}
+
+.animate-wag {
+  animation: wag 0.15s ease-in-out infinite;
+}
+
+/* 气泡浮动消失动画 */
+@keyframes floatUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-40px) scale(1.2);
+  }
+}
+
+.animate-float-up {
+  animation: floatUp 1.5s ease-out forwards;
+}
+
+.pet-action-button {
+  display: inline-flex;
+  width: 28px;
+  height: 28px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.62);
+  box-shadow: 0 4px 10px rgba(148, 120, 93, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  transition:
+    transform 160ms ease,
+    background 160ms ease;
+  cursor: pointer;
+}
+
+.pet-action-button:hover {
+  transform: translateY(-1px) scale(1.04);
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.pet-samoyed {
+  transform-origin: 58% 84%;
+  filter: drop-shadow(0 10px 12px rgba(112, 88, 62, 0.14));
+}
+
+.pet-happy {
+  animation: petHappy 0.7s ease-in-out;
+}
+
+.pet-napping {
+  animation: petNap 2.4s ease-in-out infinite;
+}
+
+.pet-floating-note {
+  pointer-events: none;
+  animation: petNote 1.2s ease-out forwards;
+}
+
+@keyframes petHappy {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  28% {
+    transform: translateY(-5px) rotate(-2deg);
+  }
+
+  56% {
+    transform: translateY(0) rotate(2deg);
+  }
+
+  78% {
+    transform: translateY(-2px) rotate(-1deg);
+  }
+}
+
+@keyframes petNap {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(2px) scale(0.99);
+  }
+}
+
+@keyframes petNote {
+  0% {
+    opacity: 0;
+    transform: translateY(8px) scale(0.9);
+  }
+
+  18% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-34px) scale(1.1);
+  }
+}
