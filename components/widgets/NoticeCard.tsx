@@ -4,7 +4,7 @@ export default function NoticeCard() {
       <h3 className="text-[13px] font-medium text-gray-500 mb-2.5">最新公告</h3>
       <div className="flex items-start gap-2.5">
         <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-flesh-light to-flesh-soft flex items-center justify-center shrink-0">
-          <svg width="18" height="18" viewBox="0 0 1024 1024" fill="#cc6b8a">
+          <svg width="23" height="23" viewBox="0 0 1024 1024" fill="#311921ff">
             <path d="M63.520197 64.485687 63.520197 847.402933l727.208457 0L790.728654 64.485687 63.520197 64.485687zM735.893768 792.514835 117.451504 792.514835 117.451504 118.357642 735.893768 118.357642 735.893768 792.514835z" />
             <path d="M192.604134 400.401296l458.300984 0 0 55.113225-458.300984 0 0-55.113225Z" />
             <path d="M192.604134 512.239454l458.300984 0 0 55.113225-458.300984 0 0-55.113225Z" />
