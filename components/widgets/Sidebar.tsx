@@ -64,7 +64,7 @@ export default function Sidebar() {
     <div className="widget-card p-5 h-full flex flex-col">
       {/* 用户信息 */}
       <div className="flex items-center gap-2.5 mb-5">
-        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-amber-100 to-yellow-100 flex items-center justify-center text-sm overflow-hidden">
+        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-pink-100 to-rose-100 flex items-center justify-center text-sm overflow-hidden">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
             <circle cx="12" cy="8" r="4" fill="#f59e0b" opacity="0.6" />
             <path d="M4 20c0-4 4-7 8-7s8 3 8 7" fill="#f59e0b" opacity="0.4" />
@@ -72,7 +72,7 @@ export default function Sidebar() {
         </div>
         <div className="flex items-center gap-1.5">
           <span className="font-semibold text-gray-800 text-[15px]">Aiaod</span>
-          <span className="text-xs text-amber-500">[开发中]</span>
+          <span className="text-xs text-pink-500">[开发中]</span>
         </div>
       </div>
 
@@ -88,7 +88,7 @@ export default function Sidebar() {
             key={item.label}
             onClick={() => setActiveIndex(index)}
             className={`flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-[14px] text-left transition-all duration-200 cursor-pointer ${activeIndex === index
-              ? "bg-amber-50/80 text-amber-700 font-medium"
+              ? "bg-pink-50/80 text-pink-600 font-medium"
               : "text-gray-500 hover:bg-gray-50/60"
               }`}
           >

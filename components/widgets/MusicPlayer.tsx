@@ -11,7 +11,7 @@ export default function MusicPlayer() {
     <div className="flex flex-col gap-2">
       {/* 播放器 */}
       <div className="widget-card p-4 flex items-center gap-3">
-        <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center text-base">
+        <div className="w-8 h-8 rounded-full bg-pink-50 flex items-center justify-center text-base">
 
         </div>
         <div className="flex-1 min-w-0">
@@ -21,7 +21,7 @@ export default function MusicPlayer() {
         </div>
         <button
           onClick={() => setIsPlaying(!isPlaying)}
-          className="w-8 h-8 rounded-full bg-blue-400 hover:bg-blue-500 text-white flex items-center justify-center transition-colors cursor-pointer text-sm shadow-sm"
+          className="w-8 h-8 rounded-full bg-pink-400 hover:bg-pink-500 text-white flex items-center justify-center transition-colors cursor-pointer text-sm shadow-sm"
         >
           {isPlaying ? "⏸" : "▶"}
         </button>

@@ -28,7 +28,7 @@ export default function GreetingCard() {
       </div>
       <p className="text-gray-400 text-[15px] mb-2 font-light">{greeting}</p>
       <p className="text-gray-700 text-[17px] leading-relaxed font-light">
-        I&apos;m <span className="text-blue-500 font-medium">Aiaod</span>, Nice to
+        I&apos;m <span className="text-pink-500 font-medium">Aiaod</span>, Nice to
         <br />
         meet you!
       </p>
