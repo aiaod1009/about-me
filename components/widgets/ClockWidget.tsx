@@ -2,11 +2,11 @@
 
 import { useState, useEffect } from "react";
 
-// Refined 7-segment LCD display - fits within 190x90px container
-const DIGIT_W = 22;
-const DIGIT_H = 40;
+// Refined 7-segment LCD display - fits within container (190x90 - p-5 padding = 150x50)
+const DIGIT_W = 35;
+const DIGIT_H = 65;
 const SEG_THICKNESS = 3;
-const SEG_GAP = 1.5;
+const SEG_GAP = 2;
 
 // 7-segment patterns: [a(top), b(top-right), c(bottom-right), d(bottom), e(bottom-left), f(top-left), g(middle)]
 const DIGIT_MAP: Record<string, boolean[]> = {
@@ -84,9 +84,9 @@ export default function ClockWidget() {
   const minutes = time.getMinutes().toString().padStart(2, "0");
 
   return (
-    <div className="widget-card p-5 flex items-center justify-center">
+    <div className="widget-card p-5 flex items-center justify-center h-[100px] overflow-hidden">
       <div
-        className="flex items-center rounded-[18px] px-4 py-3"
+        className="flex items-center rounded-[12px] px-2.5 py-1.5"
         style={{
           background: "linear-gradient(180deg, #f2f4f5 0%, #eaeced 100%)",
           boxShadow: "0 1px 4px rgba(0,0,0,0.04), inset 0 1px 0 rgba(255,255,255,0.9)",
