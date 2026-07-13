@@ -31,7 +31,7 @@ export default function ProjectList() {
             key={project.name}
             className="rounded-xl px-3 py-2 hover:bg-gray-50/60 transition-colors cursor-pointer group"
           >
-            <h4 className="text-[13px] font-medium text-gray-700 group-hover:text-pink-500 transition-colors">
+            <h4 className="text-[13px] font-medium text-gray-700 group-hover:text-flesh-dark transition-colors">
               {project.name}
             </h4>
             <p className="text-[11px] text-gray-400">{project.desc}</p>
@@ -39,7 +39,7 @@ export default function ProjectList() {
         ))}
       </div>
       <div className="mt-2 pt-2 border-t border-gray-100 text-center">
-        <span className="text-[12px] text-pink-500 cursor-pointer hover:text-pink-600 transition-colors">
+        <span className="text-[12px] text-flesh cursor-pointer hover:text-flesh-dark transition-colors">
           查看更多 →
         </span>
       </div>

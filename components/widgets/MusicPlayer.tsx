@@ -11,7 +11,7 @@ export default function MusicPlayer() {
     <div className="flex flex-col gap-2">
       {/* 播放器 */}
       <div className="widget-card p-4 flex items-center gap-3">
-        <div className="w-8 h-8 rounded-full bg-pink-50 flex items-center justify-center text-base">
+        <div className="w-8 h-8 rounded-full bg-flesh-light flex items-center justify-center text-base">
 
         </div>
         <div className="flex-1 min-w-0">
@@ -21,7 +21,7 @@ export default function MusicPlayer() {
         </div>
         <button
           onClick={() => setIsPlaying(!isPlaying)}
-          className="w-8 h-8 rounded-full bg-pink-400 hover:bg-pink-500 text-white flex items-center justify-center transition-colors cursor-pointer text-sm shadow-sm"
+          className="w-8 h-8 rounded-full bg-flesh hover:bg-flesh-dark text-white flex items-center justify-center transition-colors cursor-pointer text-sm shadow-sm"
         >
           {isPlaying ? "⏸" : "▶"}
         </button>
@@ -35,8 +35,8 @@ export default function MusicPlayer() {
             setLikeCount(liked ? likeCount - 1 : likeCount + 1);
           }}
           className={`text-[11px] px-2.5 py-1 rounded-full transition-colors cursor-pointer ${liked
-            ? "bg-pink-100 text-pink-500"
-            : "bg-pink-50 text-pink-300 hover:text-pink-400"
+            ? "bg-flesh-soft text-flesh-dark"
+            : "bg-flesh-light text-flesh hover:text-flesh-dark"
             }`}
         >
           {liked ? "❤️" : "🤍"} {likeCount}

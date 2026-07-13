@@ -119,7 +119,7 @@ export default function IllustrationCard() {
       aria-label="和萨摩耶互动"
     >
       <div className="absolute inset-x-4 top-3 z-20 flex items-center justify-between">
-        <div className="rounded-full bg-white/55 px-2.5 py-1 text-[11px] font-medium text-pink-600 shadow-sm backdrop-blur-md">
+        <div className="rounded-full bg-white/55 px-2.5 py-1 text-[11px] font-medium text-flesh-dark shadow-sm backdrop-blur-md">
           {mood}
         </div>
       </div>

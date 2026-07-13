@@ -3,6 +3,10 @@
 :root {
   --background: #eef2f0;
   --foreground: #333;
+  --flesh: #ff99b9;
+  --flesh-light: #fff0f5;
+  --flesh-dark: #cc6b8a;
+  --flesh-soft: #ffe0eb;
 }
 
 @theme inline {
@@ -32,6 +36,47 @@ body {
       #c5e0d6 100%);
   background-attachment: fixed;
   min-height: 100vh;
+}
+
+/* 自定义肉粉色样式 */
+.text-flesh {
+  color: var(--flesh);
+}
+
+.text-flesh-light {
+  color: var(--flesh-light);
+}
+
+.text-flesh-dark {
+  color: var(--flesh-dark);
+}
+
+.text-flesh-soft {
+  color: var(--flesh-soft);
+}
+
+.bg-flesh {
+  background-color: var(--flesh);
+}
+
+.bg-flesh-light {
+  background-color: var(--flesh-light);
+}
+
+.bg-flesh-dark {
+  background-color: var(--flesh-dark);
+}
+
+.bg-flesh-soft {
+  background-color: var(--flesh-soft);
+}
+
+.hover\:text-flesh-dark:hover {
+  color: var(--flesh-dark);
+}
+
+.hover\:bg-flesh-dark:hover {
+  background-color: var(--flesh-dark);
 }
 
 /* 卡片基础样式 - 毛玻璃效果 */

@@ -17,7 +17,7 @@ export default function ClockWidget() {
     <div className="widget-card p-5 flex items-center justify-center">
       <div className="clock-digit text-[52px] text-gray-700 tracking-wider">
         {hours}
-        <span className="text-pink-400 mx-1">:</span>
+        <span className="text-flesh mx-1">:</span>
         {minutes}
       </div>
     </div>
