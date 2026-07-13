@@ -2,11 +2,11 @@
 
 import { useState, useEffect } from "react";
 
-// Refined 7-segment LCD display - closer to reference image
-const DIGIT_W = 26;
-const DIGIT_H = 48;
-const SEG_THICKNESS = 3.5;
-const SEG_GAP = 1.2;
+// Refined 7-segment LCD display - fits within 190x90px container
+const DIGIT_W = 22;
+const DIGIT_H = 40;
+const SEG_THICKNESS = 3;
+const SEG_GAP = 1.5;
 
 // 7-segment patterns: [a(top), b(top-right), c(bottom-right), d(bottom), e(bottom-left), f(top-left), g(middle)]
 const DIGIT_MAP: Record<string, boolean[]> = {
