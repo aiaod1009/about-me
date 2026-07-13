@@ -51,7 +51,7 @@ body {
 .clock-digit {
   font-family: 'Courier New', 'Consolas', monospace;
   font-weight: 300;
-  letter-spacing: 3px;
+  letter-spacing: 0px;
 }
 
 /* 自定义滚动条 */
@@ -149,6 +149,7 @@ body {
 }
 
 @keyframes petHappy {
+
   0%,
   100% {
     transform: translateY(0) rotate(0deg);
@@ -168,6 +169,7 @@ body {
 }
 
 @keyframes petNap {
+
   0%,
   100% {
     transform: translateY(0) scale(1);
