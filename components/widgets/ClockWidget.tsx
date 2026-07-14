@@ -27,16 +27,16 @@ function SevenSegmentDigit({ digit }: { digit: string }) {
   const onColor = "#3d4f4f";
   const offColor = "#d5d9da";
 
-  // Calculate segment dimensions
+  // Calculate segment dimensions - verticals extend to edges
   const hSegW = DIGIT_W - 2 * SEG_THICKNESS - 2 * SEG_GAP;
-  const vSegH = (DIGIT_H - 3 * SEG_THICKNESS - 4 * SEG_GAP) / 2;
+  const vSegH = (DIGIT_H - 3 * SEG_THICKNESS - 2 * SEG_GAP) / 2;
 
   // Positions
   const hY = [0.5, DIGIT_H / 2 - SEG_THICKNESS / 2, DIGIT_H - SEG_THICKNESS - 0.5];
   const hX = SEG_THICKNESS + SEG_GAP;
 
-  const vTop = SEG_THICKNESS + SEG_GAP;
-  const vBot = vTop + vSegH + SEG_THICKNESS;
+  const vTop = SEG_THICKNESS;
+  const vBot = vTop + vSegH + SEG_THICKNESS + SEG_GAP;
   const vLeftX = 0.5;
   const vRightX = DIGIT_W - SEG_THICKNESS - 0.5;
 
