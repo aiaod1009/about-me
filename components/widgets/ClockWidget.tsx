@@ -86,7 +86,7 @@ export default function ClockWidget() {
   return (
     <div className="widget-card p-5 flex items-center justify-center h-[100px] overflow-hidden">
       <div
-        className="flex items-center rounded-[12px] px-2.5 py-1.5"
+        className="flex items-center gap-1 rounded-[12px] px-2.5 py-1.5"
         style={{
           background: "linear-gradient(180deg, #f2f4f5 0%, #eaeced 100%)",
           boxShadow: "0 1px 4px rgba(0,0,0,0.04), inset 0 1px 0 rgba(255,255,255,0.9)",
