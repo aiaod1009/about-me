@@ -9,11 +9,6 @@ export default function SocialLinks() {
         Github
       </button>
 
-      {/* Bilibili */}
-      <button className="bg-pink-500 hover:bg-pink-600 text-white text-[13px] px-4 py-2 rounded-xl flex items-center gap-1.5 transition-colors cursor-pointer shadow-sm">
-        <span className="text-[14px]"></span>
-        bilibili
-      </button>
 
       {/* Email */}
       <button className="bg-blue-500 hover:bg-blue-600 text-white w-9 h-9 rounded-xl flex items-center justify-center transition-colors cursor-pointer shadow-sm">
