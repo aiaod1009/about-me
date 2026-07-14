@@ -9,7 +9,6 @@ export default function SocialLinks() {
         Github
       </button>
 
-
       {/* Email */}
       <button className="bg-blue-500 hover:bg-blue-600 text-white w-9 h-9 rounded-xl flex items-center justify-center transition-colors cursor-pointer shadow-sm">
         <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
