@@ -7,6 +7,7 @@ import SocialLinks from "@/components/widgets/SocialLinks";
 import MusicPlayer from "@/components/widgets/MusicPlayer";
 import IllustrationCard from "@/components/widgets/IllustrationCard";
 import RecommendCard from "@/components/widgets/RecommendCard";
+import RecentArticles from "@/components/widgets/RecentArticles";
 
 export default function Home() {
   return (
@@ -15,15 +16,19 @@ export default function Home() {
       <div className="relative select-none" style={{ width: "1200px", minHeight: "720px" }}>
 
         {/* ================= 左列 ================= */}
-        <div className="absolute" style={{ left: "180px", top: "140px", width: "220px", height: "390px" }}>
+        <div className="absolute" style={{ left: "180px", top: "300px", width: "220px", height: "390px" }}>
           <Sidebar />
         </div>
 
-        <div className="absolute" style={{ left: "180px", top: "550px", width: "220px", height: "120px" }}>
+        <div className="absolute" style={{ left: "180px", top: "710px", width: "220px", height: "120px" }}>
           <NoticeCard />
         </div>
 
         {/* ================= 中列 ================= */}
+        <div className="absolute" style={{ left: "180px", top: "70px", width: "240px", height: "220px" }}>
+          <RecentArticles />
+        </div>
+
         <div className="absolute" style={{ left: "440px", top: "70px", width: "280px", height: "150px" }}>
           <IllustrationCard />
         </div>
