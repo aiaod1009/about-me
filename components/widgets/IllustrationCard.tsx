@@ -118,23 +118,10 @@ export default function IllustrationCard() {
       }}
       aria-label="和萨摩耶互动"
     >
-      <div className="absolute inset-x-4 top-3 z-20 flex items-center justify-between">
-        <div className="rounded-full bg-white/55 px-2.5 py-1 text-[11px] font-medium text-flesh-dark shadow-sm backdrop-blur-md">
-          {mood}
+      <div className="absolute left-[84px] top-[38px] z-30">
+        <div className="rounded-2xl rounded-br-md bg-white/85 px-3 py-1.5 text-[12px] font-medium text-gray-600 shadow-sm backdrop-blur-md transition-transform group-hover:-translate-y-0.5">
+          {bubbleText}
         </div>
-      </div>
-
-      <div className="absolute left-5 top-12 z-20 flex flex-col gap-1.5">
-        <div className="h-1.5 w-20 overflow-hidden rounded-full bg-white/55">
-          <div className="h-full rounded-full bg-rose-300 transition-all" style={{ width: `${happiness}%` }} />
-        </div>
-        <div className="h-1.5 w-16 overflow-hidden rounded-full bg-white/55">
-          <div className="h-full rounded-full bg-sky-300 transition-all" style={{ width: `${energy}%` }} />
-        </div>
-      </div>
-
-      <div className="absolute left-[84px] top-[38px] z-30 rounded-2xl rounded-bl-md bg-white/80 px-3 py-1.5 text-[12px] font-medium text-gray-600 shadow-sm backdrop-blur-md transition-transform group-hover:-translate-y-0.5">
-        {bubbleText}
       </div>
 
       <div
@@ -153,10 +140,8 @@ export default function IllustrationCard() {
           } ${isNapping ? "pet-napping" : ""}`}
         style={{
           width: "230px",
-          imageRendering: "pixelated",
           right: "-50px",
           bottom: 4,
-          // mixBlendMode: "multiply",
         }}
       />
 
