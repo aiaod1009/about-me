@@ -72,10 +72,6 @@ export default function RecentArticles() {
         })}
       </div>
 
-      {/* 右下角萨摩耶小图标 */}
-      <div className="absolute bottom-2 right-3 z-10">
-        <img src="/samoye.png" alt="dog" className="w-10 h-10 object-contain" />
-      </div>
 
       {/* 装饰：左上角便签 */}
       <div

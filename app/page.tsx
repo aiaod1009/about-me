@@ -1,7 +1,6 @@
 import Sidebar from "@/components/widgets/Sidebar";
 import GreetingCard from "@/components/widgets/GreetingCard";
 import ClockWidget from "@/components/widgets/ClockWidget";
-import ProjectList from "@/components/widgets/ProjectList";
 import NoticeCard from "@/components/widgets/NoticeCard";
 import SocialLinks from "@/components/widgets/SocialLinks";
 import MusicPlayer from "@/components/widgets/MusicPlayer";
@@ -16,19 +15,15 @@ export default function Home() {
       <div className="relative select-none" style={{ width: "1200px", minHeight: "720px" }}>
 
         {/* ================= 左列 ================= */}
-        <div className="absolute" style={{ left: "180px", top: "300px", width: "220px", height: "390px" }}>
+        <div className="absolute" style={{ left: "180px", top: "140px", width: "220px", height: "390px" }}>
           <Sidebar />
         </div>
 
-        <div className="absolute" style={{ left: "180px", top: "710px", width: "220px", height: "120px" }}>
+        <div className="absolute" style={{ left: "180px", top: "550px", width: "220px", height: "120px" }}>
           <NoticeCard />
         </div>
 
         {/* ================= 中列 ================= */}
-        <div className="absolute" style={{ left: "180px", top: "70px", width: "240px", height: "220px" }}>
-          <RecentArticles />
-        </div>
-
         <div className="absolute" style={{ left: "440px", top: "70px", width: "280px", height: "150px" }}>
           <IllustrationCard />
         </div>
@@ -66,9 +61,9 @@ export default function Home() {
           <ClockWidget />
         </div>
 
-        {/* 项目列表 */}
+        {/* 近期文章看板 */}
         <div className="absolute" style={{ left: "760px", top: "290px", width: "260px", height: "260px" }}>
-          <ProjectList />
+          <RecentArticles />
         </div>
 
       </div>
