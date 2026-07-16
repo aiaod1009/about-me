@@ -2,6 +2,7 @@
 
 import type { MouseEvent, PointerEvent } from "react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import Link from "next/link";
 
 type FloatingNote = {
   id: number;
@@ -76,7 +77,7 @@ export default function IllustrationCard() {
 
   const handlePetPointer = useCallback(
     (event: PointerEvent<HTMLDivElement>) => {
-      if ((event.target as HTMLElement).closest("button")) return;
+      if ((event.target as HTMLElement).closest("button, a")) return;
       handleClick();
     },
     [handleClick],
@@ -118,11 +119,19 @@ export default function IllustrationCard() {
       }}
       aria-label="和萨摩耶互动"
     >
-      <div className="absolute left-[84px] top-[38px] z-30">
-        <div className="rounded-2xl rounded-br-md bg-white/85 px-3 py-1.5 text-[12px] font-medium text-gray-600 shadow-sm backdrop-blur-md transition-transform group-hover:-translate-y-0.5">
-          {bubbleText}
-        </div>
-      </div>
+      {/* 书架 - 项目入口 */}
+      <Link
+        href="/projects"
+        className="absolute left-2 top-2 z-20 cursor-pointer"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <img
+          src="/shujia.png"
+          alt="项目入口"
+          className="w-[120px] drop-shadow-md"
+          style={{ imageRendering: "pixelated" }}
+        />
+      </Link>
 
       <div
         className="absolute bottom-0 left-0 right-0"

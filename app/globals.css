@@ -226,3 +226,52 @@ body {
     transform: translateY(-34px) scale(1.1);
   }
 }
+
+/* 书本摇摆动画 */
+@keyframes bookWiggle {
+
+  0%,
+  100% {
+    transform: rotate(var(--base-rotate, 0deg));
+  }
+
+  25% {
+    transform: rotate(calc(var(--base-rotate, 0deg) - 3deg));
+  }
+
+  75% {
+    transform: rotate(calc(var(--base-rotate, 0deg) + 3deg));
+  }
+}
+
+.group\/book:hover .flex>div {
+  animation: bookWiggle 0.4s ease-in-out;
+}
+
+.group\/book:hover .flex>div:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.group\/book:hover .flex>div:nth-child(2) {
+  animation-delay: 0.05s;
+}
+
+.group\/book:hover .flex>div:nth-child(3) {
+  animation-delay: 0.1s;
+}
+
+.group\/book:hover .flex>div:nth-child(4) {
+  animation-delay: 0.15s;
+}
+
+.group\/book:hover .flex>div:nth-child(5) {
+  animation-delay: 0.2s;
+}
+
+.group\/book:hover .flex>div:nth-child(6) {
+  animation-delay: 0.25s;
+}
+
+.group\/book:hover .flex>div:nth-child(7) {
+  animation-delay: 0.3s;
+}
