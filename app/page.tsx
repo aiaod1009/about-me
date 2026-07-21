@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Sidebar from "@/components/widgets/Sidebar";
 import GreetingCard from "@/components/widgets/GreetingCard";
 import ClockWidget from "@/components/widgets/ClockWidget";
@@ -8,9 +11,17 @@ import IllustrationCard from "@/components/widgets/IllustrationCard";
 import RecommendCard from "@/components/widgets/RecommendCard";
 import RecentArticles from "@/components/widgets/RecentArticles";
 
+const backgrounds = [
+  "bg-gradient-to-br from-[#c8dcfa] to-[#fad4e4]",
+  "bg-[url('/bg1.jpg')] bg-cover bg-center",
+  "bg-[url('/bg2.jpg')] bg-cover bg-center",
+];
+
 export default function Home() {
+  const [bgIndex, setBgIndex] = useState(0);
+
   return (
-    <div className="relative min-h-screen overflow-auto flex items-start justify-center pt-1 bg-gradient-to-br from-[#c8dcfa] to-[#fad4e4]">
+    <div className={`relative min-h-screen overflow-auto flex items-start justify-center pt-1 ${backgrounds[bgIndex]}`}>
       {/* 限制最大容器并提供相对定位环境 */}
       <div className="relative select-none" style={{ width: "1200px", minHeight: "720px" }}>
 
@@ -33,7 +44,7 @@ export default function Home() {
         </div>
 
         <div className="absolute flex justify-center" style={{ left: "440px", top: "510px", width: "280px", height: "40px" }}>
-          <SocialLinks />
+          <SocialLinks onSwitchBg={() => setBgIndex((prev) => (prev + 1) % backgrounds.length)} />
         </div>
 
         {/* ================= 底部错落区 ================= */}

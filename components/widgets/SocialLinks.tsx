@@ -1,4 +1,8 @@
-export default function SocialLinks() {
+interface Props {
+  onSwitchBg?: () => void;
+}
+
+export default function SocialLinks({ onSwitchBg }: Props) {
   return (
     <div className="flex items-center justify-center gap-2.5">
       {/* Github */}
@@ -13,6 +17,17 @@ export default function SocialLinks() {
         </svg>
         Github
       </a>
+
+      {/* 换壁纸 */}
+      <button
+        onClick={onSwitchBg}
+        className="bg-purple-500 hover:bg-purple-600 text-white w-9 h-9 rounded-xl flex items-center justify-center transition-colors cursor-pointer shadow-sm"
+        title="换壁纸"
+      >
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg>
+      </button>
 
       {/* Email */}
       <button className="bg-blue-500 hover:bg-blue-600 text-white w-9 h-9 rounded-xl flex items-center justify-center transition-colors cursor-pointer shadow-sm">
